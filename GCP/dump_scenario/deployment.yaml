@@ -26,6 +26,11 @@ spec:
         image: gcr.io/canvas-chariot-428823-b8/php-app:latest
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 20m
+          limits:
+            cpu: 50m
         env:
         - name: DB_HOST
           value: "127.0.0.1"  # Cloud SQL 프록시가 로컬 호스트를 사용하므로
