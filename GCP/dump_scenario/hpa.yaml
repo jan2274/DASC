@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: rds-deployment-hpa
+  name: sql-deployment-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: dasc-deployment
+    name: php-app
   minReplicas: 1
   maxReplicas: 10
   behavior:
