@@ -38,7 +38,7 @@ def upload_to_mysql(event, context):
 
     # MySQL에 데이터 업로드
     with engine.connect() as connection:
-        df.to_sql('exam_dump', con=connection, if_exists='replace', index=False)
+        df.to_sql('exam_example', con=connection, if_exists='replace', index=False)
 
     return "CSV data uploaded to MySQL.", 200
 
